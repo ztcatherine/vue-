@@ -1,64 +1,44 @@
 <template>
   <div id="continer">
-    <div id="header">请发表对Vue的评论</div>
-    <div id="content">
-      <add :addComment="addComment"></add>
-      <list :comments="comments" :deleteComment="deleteComment"></list>
+    <div id="app-left">
+      <!--<a href="#">About</a>
+      <a href="#">Home</a>-->
+      <router-link to="/About">About</router-link>
+      <router-link to="/Home">Home</router-link>
+    </div>
+    <div id="app-right">
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-  import add from './add.vue'
-  import list from './list.vue'
-  export default {
-    data(){
-      return{
-        comments:[
-          {name:'Tom',content:'Vue还不错！'},
-          {name:'Jack',content:'Vue挺好！'}
-        ]
-      }
-    },
-
-    methods:{
-      addComment(comment){
-        this.comments.unshift(comment)
-      },
-      deleteComment(index){
-        this.comments.splice(index,1)
-      }
-    },
-    components:{
-      add,list
-    }
-  }
+  export default {}
 </script>
 
 <style>
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  html,body{
-    width: 100%;
-    height: 1000px;
-  }
   #continer{
-    width: 100%;
-    height: 100%;
-  }
-  #header{
-    height: 150px;
-    background-color: #f0f0f0;
     display: flex;
-    align-items: center;
-    padding-left: 50px;
-    font-size: 20px;
+    margin: 100px 0 0 50px;
   }
-  #content{
-    width: 100%;
-    display: flex;
+  #app-left{
+    width: 150px;
+    height: 100px;
   }
-
+  #app-left a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+  #app-right{
+    width: 400px;
+    height: 200px;
+    margin-left: 20px;
+    padding: 30px 0 10px 10px;
+  }
 </style>

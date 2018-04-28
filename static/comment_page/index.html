@@ -3,38 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="../index.css">
 </head>
 <body>
   <div id="app">
     <div id="continer">
-      <div id="header">请发表对Vue的评论</div>
-      <div id="content">
-        <div id="left">
-          用户名 <br>
-          <input type="text" placeholder="用户名"><br>
-          评论内容 <br>
-          <input type="text" placeholder="评论内容" id="msg">
-          <button>提交</button>
-        </div>
-        <div id="right">
-          <h3>评论回复:</h3>
-          <ul id="group">
-            <li class="list-group">
-              <div class="del">
-                <a href="#">删除</a>
-              </div>
-              <p class="user"><span>xxx</span><span>说：</span></p>
-              <p class="centens">Vue还不错！</p>
-            </li>
-            <li class="list-group">
-              <div class="del">
-                <a href="#">删除</a>
-              </div>
-              <p class="user"><span>yyy</span><span>说：</span></p>
-              <p class="centens">Vue真好！</p>
-            </li>
+      <div id="app-left">
+        <a href="#">About</a>
+        <a href="#">Home</a>
+      </div>
+      <div id="app-right">
+        <div class="Qtly">
+          <h2>Home</h2>
+          <div class="msg">Home route component!</div>
+          <div id="title">
+            <div class="titleN"><a href="#">News</a></div>
+            <div class="titleN"><a href="#">Message</a></div>
+          </div>
+          <ul class="news" style="display: none">
+            <li>news01</li>
+            <li>news02</li>
           </ul>
+          <ul class="massage">
+            <li><a href="#">message01</a></li>
+            <li><a href="#">message02</a></li>
+            <li><a href="#">message03</a></li>
+          </ul>
+          <span>消息ID为1的详情为xxxx</span>
         </div>
       </div>
     </div>
